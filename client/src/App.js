@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Forms from './components/Forms'
+import Login from './components/Login'
+import Register from './components/Register'
 import FoodCard from './components/FoodCard'
 
 import './App.css';
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>test</h1>
-        <Forms />
+        <Login />
+        <Register />
         <FoodCard />
       </header>
     </div>

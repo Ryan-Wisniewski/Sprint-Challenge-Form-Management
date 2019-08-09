@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Form, Field, withFormik, Formik } from 'formik'
 import * as Yup from 'yup'
 
-const Forms = ({errors, touched}) =>{
+const Register = ({errors, touched}) =>{
     // state = {
     //     username: '',
     //     password: ''
@@ -12,9 +12,10 @@ const Forms = ({errors, touched}) =>{
     
     return(
         <div>
+          <h1>register</h1>
             <Form>
                 <Field type="text" name="username" placeholder='Name Here' className='field' />
-                {touched.name && errors.name && <p className='error'>{errors.name}</p>}
+                {touched.username && errors.username && <p className='error'>{errors.username}</p>}
 
                 <Field type="password" name="password" placeholder='Password Here' className='field' />
                 {touched.password && errors.password && <p className='error'>{errors.password}</p>}
@@ -45,7 +46,7 @@ const FormikForm = withFormik({
         .then(res => console.log(res))
         .catch(err=> console.log(err.response))
     }
-  })(Forms)
+  })(Register)
   
   
     // console.log()
