@@ -9,6 +9,7 @@ class FoodCard extends React.Component{
 
     componentDidMount(){
         this.fetchUser()
+        console.log('mounted')
 
     }
 
@@ -21,10 +22,11 @@ class FoodCard extends React.Component{
     render(){
         return(
             <div>
-                <p>test</p>
                 {this.state.food.map(foods=> {
                     return ( 
-                <Food name={foods.name} id={foods.id} />
+                <div data-testid="name">
+                <Food name={foods.name} id={foods.id}  />
+                </div>
                 )})}
             </div>
         )
