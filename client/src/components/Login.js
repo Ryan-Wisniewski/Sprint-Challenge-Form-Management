@@ -43,7 +43,7 @@ const FormikForm = withFormik({
   //handleSubmit
     handleSubmit(values){
       console.log('yayy', values)
-      axios.post('http://localhost:5000/api/register', values)
+      axios.get('http://localhost:5000/api/register', values)
         .then(res => console.log(res))
         .catch(err=> console.log(err.response))
     }
